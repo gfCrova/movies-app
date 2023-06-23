@@ -1,17 +1,17 @@
-import React from 'react'
-import movies from '../movies.json'
-import MovieCard from './MovieCard'
-import styles from '../css/MoviesGrid.module.css'
+import React from "react";
+import movies from "../movies.json";
+import MovieCard from "./MovieCard";
+import styles from "../css/MoviesGrid.module.css";
 
 const MoviesGrid = () => {
-    console.log(movies)
+  console.log(movies);
   return (
     <ul className={styles.moviesGrid}>
-        {movies.map((movie) => (
-            <MovieCard key={movie.id} movie={movie}/>))
-        }
+      {movies.map((movie) => (
+        <MovieCard key={movie.id} movie={movie} />
+      ))}
     </ul>
-  )
-}
+  );
+};
 
-export default MoviesGrid
+export default MoviesGrid;
