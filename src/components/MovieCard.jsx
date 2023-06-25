@@ -6,7 +6,7 @@ export const MovieCard = ({ movie }) => {
   const imgUrl = "https://image.tmdb.org/t/p/w300" + movie.poster_path;
   return (
     <li className={styles.movieCard}>
-      <Link className={styles.movieLink} exact to={"/movie/" + movie.id}>
+      <Link className={styles.movieLink} to={"/movie/" + movie.id}>
         <img
           width={230}
           height={345}
