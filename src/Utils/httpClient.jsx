@@ -1,12 +1,14 @@
-const api = "https://api.themoviedb.org/3";
+import { API_TOKEN } from './config';
+
+const API = "https://api.themoviedb.org/3";
 
 export const get = async (path) => {
     
     try {
-      const response = await fetch(api + path, {
+      const response = await fetch(API + path, {
         headers: {
           Authorization:
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3OWMyOGIxNjVlNzE2Nzc1MjdkZWQ3MWJiNGFlMmUwZSIsInN1YiI6IjY0OTY5NDZjZWI3OWMyMDBmZjAwNDI5MyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.NujYKcDOI7ikvVncmriuzNCgGlgCxawlx85_6-AyQeo",
+            "Bearer " + API_TOKEN,
           "Content-Type": "application/json;charset=utf-8",
         },
       });
