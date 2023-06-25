@@ -1,0 +1,19 @@
+.containerSpinner {
+    display: flex;
+    justify-content: center;
+}
+
+.spinner {
+    color: aliceblue;
+    margin-top: 3rem;
+    animation: spinn 1s infinite;
+}
+
+@keyframes spinn {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
