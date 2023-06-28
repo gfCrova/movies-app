@@ -1,10 +1,10 @@
 .appHeader {
-  text-align: center;
-  font-size: calc(10px + 2vmin);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 0 20px;
+  background-color: rgba(10, 10, 10);
+  font-size: calc(10px + 1vmin);
   color: white;
-}
-
-.linkHeader {
-  color: aliceblue;
-  text-decoration: none;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
