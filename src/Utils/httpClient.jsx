@@ -1,6 +1,4 @@
-import { API_TOKEN } from './config';
-
-const API = "https://api.themoviedb.org/3";
+import { API, API_TOKEN } from './config';
 
 export const get = async (path) => {
     
@@ -14,6 +12,7 @@ export const get = async (path) => {
       });
   
       const data = await response.json();
+      //console.log(data)
       return data;
 
     } catch (error) {
