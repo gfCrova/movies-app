@@ -1,11 +1,12 @@
 .containerSpinner {
     display: flex;
     justify-content: center;
+    height: 100vh;
 }
 
 .spinner {
     color: aliceblue;
-    margin-top: 3rem;
+    margin: 3rem;
     animation: spinn 1s infinite;
 }
 
