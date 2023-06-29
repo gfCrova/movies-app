@@ -5,12 +5,15 @@
     gap: 1rem;
     color: aliceblue;
     font-size: 1.5rem;
+    height: 100vh;
+    padding-top: 6rem;
 }
 
 .col {
-    max-width: 400px;
+    min-width: 450px;
+    max-width: 450px;
     margin: 5px;
-    height: auto;
+    max-height: 650px;
 }
 
 .movieImage {
