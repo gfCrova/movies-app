@@ -1,3 +1,7 @@
+.body {
+  background-color: black;
+}
+
 .appHeader {
   display: flex;
   justify-content: space-between;
@@ -7,4 +11,28 @@
   font-size: calc(10px + 1vmin);
   color: white;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100vw;
 }
+
+.footer {
+  background-color: aliceblue;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.footerUl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  font-size: 16pt;
+  font-weight: 700;
+  list-style: none;
+  padding-top: 6px;
+}
+
