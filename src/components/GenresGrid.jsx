@@ -5,18 +5,20 @@ import {useEffect, useState} from 'react'
 import {Empty} from './Empty'
 import InfiniteScroll from "react-infinite-scroll-component";
 import styles from './MovieGrid.module.css'
+import {API_KEY} from '../Utils/config'
 
-export const GenresGrid = ({key, genre}) => {
-
+export const GenresGrid = ({genre}) => {
+ 
   const [movies, setMovies] = useState([]);
   const [hasMore, setHasMore] = useState(true); // Indicador de si hay más películas por cargar
   const [page, setPage] = useState(1);  // Número de página actual
+
 
   useEffect(() => {
 
     const fetchData = async () => {
       // Construir la URL de la consulta en función de la búsqueda y la página actual
-      let searchUrl = genre ? `/discover/movie?api_key=${key}&with_genres=${genre}&page=${page}` : `/discover/movie?page=${page}`;
+      let searchUrl = genre ? `/discover/movie?api_key=${API_KEY}&language=en-US&sort_by=release_date.desc&with_genres=${genre}&page=${page}` : `/discover/movie?page=${page}`;
 
       const data = await get(searchUrl);
 
@@ -30,7 +32,7 @@ export const GenresGrid = ({key, genre}) => {
       setHasMore(data.page < data.total_pages);
     };
     fetchData();
-  }, [key, genre, page, movies]);
+  }, [genre, page, movies]);
 
   if(movies.length === 0 && !hasMore) {
     return <Empty/>
