@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import styles from "./DetailsPage.module.css";
 import { useParams } from "react-router-dom";
-import { get } from "../Utils/httpClient";
-import { Spinner } from "../components/Spinner";
-import { moviePoster } from "../Utils/moviePoster";
+import { get } from "../../Utils/httpClient";
+import { Spinner } from "../../components/Spinner/Spinner";
+import { moviePoster } from "../../Utils/moviePoster";
 
 /**
 Componente DetailsPage

@@ -1,4 +1,4 @@
-import { GenresGrid } from "../components/GenresGrid";
+import { GenresGrid } from "../../components/Movie/GenresGrid/GenresGrid";
 import { useParams } from "react-router-dom";
 import styles from './GenresPage.module.css'
 
