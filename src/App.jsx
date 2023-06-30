@@ -1,12 +1,12 @@
-import { HomePage } from "./pages/HomePage";
-import { DetailsPage } from "./pages/DetailsPage.jsx";
+import { HomePage } from "./pages/Home/HomePage";
+import { DetailsPage } from "./pages/Details/DetailsPage.jsx";
 import styles from "./App.module.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { Navigation } from "./components/Navigation";
-import { ImgLogo } from "./components/ItemsNav";
-import { GenresPage } from "./pages/GenresPage";
+import { Navigation } from "./components/Navigation/Navigation";
+import { ImgLogo } from "./components/Navigation/ItemsNav";
+import { GenresPage } from "./pages/Genres/GenresPage";
 import { useState } from "react";
-import {Search} from './components/Search'
+import { Search } from "./components/Search/Search";
 
 export const App = () => {
   const [selectedGenre, setSelectedGenre] = useState(null);
