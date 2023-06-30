@@ -1,0 +1,10 @@
+
+/* Style The Dropdown Button */
+.dropbtn, .btn {
+    cursor: pointer;
+}
+
+.dropbtn:hover, .btn:hover, .btnItem:hover {
+    border-radius: 10px;
+    background-color: #0b2b4998;
+}
