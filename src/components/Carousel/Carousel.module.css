@@ -1,0 +1,8 @@
+.caption {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20pt;
+}
+
+.imgCarousel {
+    box-shadow: inset 2em -22em 12em rgb(0, 0, 0);
+}
