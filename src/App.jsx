@@ -6,7 +6,9 @@ import { Navigation } from "./components/Navigation/Navigation";
 import { ImgLogo } from "./components/Navigation/ItemsNav";
 import { GenresPage } from "./pages/Genres/GenresPage";
 import { useState } from "react";
-import { Search } from "./components/Search/Search";
+import { Search } from "./components/Navigation/Search/Search";
+import { TopRated } from "./pages/TopRated/TopRated";
+import { VideoGrid } from "./components/Movie/VideoGrid/VideoGrid";
 
 export const App = () => {
   const [selectedGenre, setSelectedGenre] = useState(null);
@@ -34,7 +36,14 @@ export const App = () => {
             <Route path="/movie/:movieId" element={<DetailsPage />} />
             <Route
               path="/genres/:genreId"
-              element={<GenresPage genre={selectedGenre} />}
+              element={<GenresPage genreId={selectedGenre} />}
+            />
+            <Route 
+              path="/movie/top_rated"
+              element={<TopRated />}
+            />
+            <Route
+              path="/movie/:movieId/videos" element={<VideoGrid/>}
             />
           </Routes>
         </main>
