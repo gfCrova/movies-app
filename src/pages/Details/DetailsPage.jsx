@@ -3,7 +3,9 @@ import styles from "./DetailsPage.module.css";
 import { useParams } from "react-router-dom";
 import { get } from "../../Utils/httpClient";
 import { Spinner } from "../../components/Spinner/Spinner";
-import { moviePoster } from "../../Utils/moviePoster";
+import { moviePoster, backdropPath } from "../../Utils/moviePoster";
+import { Badge } from "react-bootstrap";
+import { VideoGrid } from "../../components/Movie/VideoGrid/VideoGrid";
 
 /**
 Componente DetailsPage
@@ -33,36 +35,50 @@ export const DetailsPage = () => {
   }
 
   const imgUrl = moviePoster(movie.poster_path, 400);
+  const bgImgUrl = backdropPath(movie.backdrop_path, 500);
 
   return (
-    <div className={styles.detailsContainer}>
-      <img
-        className={`${styles.col} ${styles.movieImage}`}
-        src={imgUrl}
-        alt={movie.title}
-      />
-      <div className={styles.col}>
-        <p className={styles.title}>
-          <strong className={styles.strongP}>Title: </strong>
-          {movie.title}
-        </p>
-        <p>
-          <strong className={styles.strongP}>Genres: </strong>
-          {movie.genres.map((genre) => genre.name).join(", ")}
-        </p>
-        <p>
-          <strong className={styles.strongP}>Description: </strong>
-          {movie.overview}
-        </p>
-        <p>
-          <strong className={styles.strongP}>Release Date: </strong>
-          {movie.release_date}
-        </p>
-        <p>
-          <strong className={styles.strongP}>Popularity: </strong>
-          {movie.popularity}
-        </p>
-      </div>
-    </div>
+      <main className={`${styles.bodyDetails}`}>
+        <div className={styles.detailsContainer}>
+          <img
+            className={`${styles.col} ${styles.movieImage}`}
+            src={imgUrl}
+            alt={movie.title}
+          />
+          <div className={styles.col}>
+            <h1 className={styles.title}>{movie.title}</h1>
+            <p className="fs-5">
+              {movie.genres.map((genre) => {
+                return (
+                  <Badge className="m-1 text-uppercase" text="dark" bg="info">
+                    {genre.name}
+                  </Badge>
+                );
+              })}
+            </p>
+            <p className="fs-5">
+              <strong className={`${styles.strongP} text-uppercase fs-5 text-secondary`}>
+                Synopsis:{" "}
+              </strong>
+              {movie.overview}
+            </p>
+            <p  className="fs-5">
+              <strong className={`${styles.strongP} text-uppercase fs-5 text-secondary`}>Release Date: </strong>
+              {movie.release_date}
+            </p>
+            <p  className="fs-5">
+              <strong className={`${styles.strongP} text-uppercase fs-5 text-secondary`}>Popularity: </strong>
+              {movie.popularity}
+            </p>
+            <img
+              width={400}
+              className={styles.bgImg}
+              src={bgImgUrl}
+              alt={movie.original_title}
+            />
+            <VideoGrid key={movieId} mov={movieId}/>
+          </div>
+        </div>
+      </main>
   );
 };
