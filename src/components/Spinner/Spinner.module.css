@@ -6,15 +6,18 @@
 
 .spinner {
     color: aliceblue;
-    margin: 6rem;
-    animation: spinn 1s infinite;
+    margin: 4rem;
+    animation: spinn 0.2s infinite;
 }
 
 @keyframes spinn {
     0% {
         transform: rotate(0deg);
     }
-    100% {
+    50% {
         transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }
