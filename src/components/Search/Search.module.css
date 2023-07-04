@@ -18,7 +18,14 @@
 .searchButton {
     position: relative;
     right: 28px;
-    top: 3px;
+    top: 10px;
     height: 100%;
     border: none;
+}
+
+
+@media (max-width: 756px) {
+    .formContainer{
+        margin-top: 45px;
+    }
 }
