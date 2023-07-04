@@ -7,7 +7,7 @@ export const TopRated = () => {
   return (
     <div>
         <h1 className={styles.title}>Top Rated <FaRankingStar color='yellow'/></h1>
-        <MovieGridBase topRated/>
+        <MovieGridBase topRated={true}/>
     </div>
   )
 }

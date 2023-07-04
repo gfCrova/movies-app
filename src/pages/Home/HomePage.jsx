@@ -3,7 +3,7 @@ import { MovieGridBase } from "../../components/Movie/MovieGridBase/MovieGridBas
 import { useQuery } from "../../hooks/useQuery";
 import { useDebounce } from "../../hooks/useDebounce";
 import { CarouselHome } from "../../components/Carousel/Carousel";
-import { Search } from "../../components/Navigation/Search/Search";
+import { Search } from "../../components/Search/Search";
 
 export const HomePage = () => {
   const query = useQuery();
