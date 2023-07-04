@@ -5,3 +5,14 @@
     align-content: center;
     width: 100vw;
 }
+
+.divCardVideo {
+    min-width: 920px;
+}
+
+@media (max-width:756px) {
+    .divCardVideo {
+        min-width: 100%;
+        min-height: 100%;
+    }
+}

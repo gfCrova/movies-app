@@ -11,16 +11,19 @@ export const VideoGrid = () => {
     const fetchData = async () => {
       const data = await get(`/movie/${movieId}/videos`);
       setMovie(data);
-      console.log(data);
     };
     fetchData();
   }, [movieId]);
 
+  const types = ["Trailer", "Clip", "Behind the Scenes", "Featurette", "Teaser"]
+
   return (
-    <div className="d-flex gap-2">
-        <VideoModal movie={movie} type={"Trailer"} />
-        <VideoModal movie={movie} type={"Clip"} />
-        <VideoModal movie={movie} type={"Behind the Scenes"} />
+    <div className="d-flex flex-wrap gap-2">
+        {
+          types.map(tip => {
+            return <VideoModal movie={movie} type={tip} />
+          })
+        }
     </div>
   );
 };
