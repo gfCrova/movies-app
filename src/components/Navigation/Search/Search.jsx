@@ -21,7 +21,7 @@ export const Search = () => {
 
   return (
     <form className={styles.formContainer} onSubmit={handleSubmit}>
-      <div className={styles.searchBox}>
+      <div className={`${styles.searchBox} d-flex`}>
         <input
           className={styles.searchInput}
           type="text"
