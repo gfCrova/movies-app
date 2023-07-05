@@ -1,14 +1,13 @@
 import { HomePage } from "./pages/Home/HomePage";
 import { DetailsPage } from "./pages/Details/DetailsPage.jsx";
 import styles from "./App.module.css";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Navigation } from "./components/Navigation/Navigation";
-import { ImgLogo } from "./components/Navigation/ItemsNav";
 import { GenresPage } from "./pages/Genres/GenresPage";
 import { useState } from "react";
-import { Search } from "./components/Navigation/Search/Search";
 import { TopRated } from "./pages/TopRated/TopRated";
 import { VideoGrid } from "./components/Movie/VideoGrid/VideoGrid";
+import { Upcoming } from "./pages/Upcoming/Upcoming";
 
 export const App = () => {
   const [selectedGenre, setSelectedGenre] = useState(null);
@@ -18,17 +17,13 @@ export const App = () => {
   };
 
   return (
-    <Router>
-      <body className={styles.body}>
+    <div className={styles.body}>
+      <Router>
         <header className={styles.appHeader}>
-          <Link to={"/"}>
-            <ImgLogo />
-          </Link>
           <Navigation
             selectedGenre={selectedGenre}
             onGenreSelect={handleNavigationGenreSelect}
           />
-          <Search/>
         </header>
         <main className={styles.main}>
           <Routes>
@@ -38,13 +33,9 @@ export const App = () => {
               path="/genres/:genreId"
               element={<GenresPage genreId={selectedGenre} />}
             />
-            <Route 
-              path="/movie/top_rated"
-              element={<TopRated />}
-            />
-            <Route
-              path="/movie/:movieId/videos" element={<VideoGrid/>}
-            />
+            <Route path="/movie/top_rated" element={<TopRated />} />
+            <Route path="/movie/:movieId/videos" element={<VideoGrid />} />
+            <Route path="/movie/upcoming" element={<Upcoming />} />
           </Routes>
         </main>
         <footer className={styles.footer}>
@@ -55,7 +46,7 @@ export const App = () => {
             <li>Github</li>
           </ul>
         </footer>
-      </body>
-    </Router>
+      </Router>
+    </div>
   );
 };
