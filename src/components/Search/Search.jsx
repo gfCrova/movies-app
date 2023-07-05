@@ -2,7 +2,6 @@ import styles from "./Search.module.css";
 import { ImSearch } from "react-icons/im";
 import { useSearchParams } from "react-router-dom";
 
-
 /**
  Componente Search
 
@@ -26,7 +25,6 @@ export const Search = () => {
           className={styles.searchInput}
           type="text"
           value={search ?? ""}
-          autoFocus
           placeholder="Search movie..."
           aria-label="Search Movie"
           onChange={(e) => {
