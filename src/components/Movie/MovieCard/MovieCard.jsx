@@ -20,7 +20,7 @@ import { moviePoster } from "../../../Utils/moviePoster";
 export const MovieCard = ({ movie }) => {
   const imgUrl = moviePoster(movie.poster_path, 300);
   return (
-    <li className={styles.movieCard}>
+    <div className={styles.movieCard}>
       <Link className={styles.movieLink} to={"/movie/" + movie.id}>
         <img
           width={230}
@@ -31,6 +31,6 @@ export const MovieCard = ({ movie }) => {
         />
         <p className={styles.movieTitle}>{movie.title}</p>
       </Link>
-    </li>
+    </div>
   );
 };

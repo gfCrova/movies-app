@@ -5,6 +5,8 @@
 
 .movieCard:hover {
     opacity: 0.7;
+    transform: scale(1.030);
+    transition: transform 0.3s;
 }
 
 .movieImage {
