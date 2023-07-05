@@ -7,7 +7,7 @@ import styles from './Carousel.module.css'
 
 export const CarouselHome = () => {
   return (
-    <Carousel>
+    <Carousel className={styles.carousel}>
       <Carousel.Item className={styles.imgCarousel}>
         <img src={imgIndianaJones} alt="First slide" className={`w-100 opacity-50`} />
         <Carousel.Caption className={`${styles.caption} w-75`}>

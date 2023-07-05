@@ -8,5 +8,12 @@
 }
 
 .imgCarousel {
-    box-shadow: inset 2em -22em 12em rgb(0, 0, 0);
+    box-shadow:
+        inset 0em 0em 3em 3em rgba(0, 0, 0);
+}
+
+@media (max-width: 756px) {
+    .carousel {
+        display: none;
+    }
 }
