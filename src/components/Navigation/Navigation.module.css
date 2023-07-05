@@ -1,10 +1,19 @@
 
 /* Style The Dropdown Button */
 .dropbtn, .btn {
+    border-radius: 10px;
     cursor: pointer;
+    font-weight: 500;
+    margin: 0px 10px;
+}
+
+.btnItem {
+    font-size: 13pt;
+    font-weight: 500;
+    background-color: rgba(0, 0, 0, 0.699);
 }
 
 .dropbtn:hover, .btn:hover, .btnItem:hover {
     border-radius: 10px;
-    background-color: #0b2b4998;
+    background-color: #12477998;
 }
