@@ -40,8 +40,8 @@ export const Navigation = ({ selectedGenre, onGenreSelect }) => {
   }
 
   return (
-    <Navbar expand="md" autoFocus>
-      <Container className="d-flex gap-4 m-auto align-items-center">
+      <Navbar expand="md" autoFocus fixed="top">
+        <Container className="d-flex gap-4 m-auto align-items-center">
           <div>
             <NavbarBrand>
               <Link to={"/"}>
@@ -53,6 +53,12 @@ export const Navigation = ({ selectedGenre, onGenreSelect }) => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav onSelect={handleGenreSelect}>
+              <Nav.Link
+                  className={`${styles.btn} text-light`}
+                  href="/"
+                >
+                  Home
+                </Nav.Link>
                 <Nav.Link
                   className={`${styles.btn} text-light`}
                   href="/movie/upcoming"
@@ -68,9 +74,6 @@ export const Navigation = ({ selectedGenre, onGenreSelect }) => {
                   active={selectedNavItem === "top_rated"}
                 >
                   TopRated
-                </Nav.Link>
-                <Nav.Link className={`${styles.btn} text-light`} href="/">
-                  Pricing
                 </Nav.Link>
                 <NavDropdown
                   menuVariant="dark"
@@ -222,8 +225,8 @@ export const Navigation = ({ selectedGenre, onGenreSelect }) => {
               </Nav>
             </Navbar.Collapse>
           </div>
-      </Container>
-    </Navbar>
+        </Container>
+      </Navbar>
   );
 };
 

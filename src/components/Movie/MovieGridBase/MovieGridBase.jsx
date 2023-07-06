@@ -7,7 +7,7 @@ import styles from "./MovieGrid.module.css";
 import { Empty } from "../../Empty/Empty";
 import {API_KEY} from '../../../Utils/config'
 
-export const MovieGridBase = ({search, genre, topRated, videos, upcoming}) => {
+export const MovieGridBase = ({search, genre, topRated, videos, upcoming, nowPlaying}) => {
   const moviesRef = useRef([]);
   const [hasMore, setHasMore] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
@@ -27,7 +27,8 @@ export const MovieGridBase = ({search, genre, topRated, videos, upcoming}) => {
         searchUrl = `/movie/${genre}/videos?api_key=${API_KEY}&language=en-US`
       } else if(upcoming) {
         searchUrl = `/movie/upcoming?api_key=${API_KEY}&page=${page}`
-
+      } else if(nowPlaying) {
+        searchUrl = `/movie/now_playing?language=en-US&page=${page}`
       } else {
         searchUrl = `/discover/movie?page=${page}`;
       }
@@ -45,7 +46,7 @@ export const MovieGridBase = ({search, genre, topRated, videos, upcoming}) => {
     
     fetchData();
 
-  }, [search, genre, page, moviesRef, topRated, upcoming, videos]);
+  }, [search, genre, page, moviesRef, topRated, upcoming, videos, nowPlaying]);
 
   if (moviesRef.current.length === 0 && !hasMore && !isLoading) {
     return <Empty />;

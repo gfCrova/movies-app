@@ -1,15 +1,25 @@
+
 .caption {
     font-family: 'Roboto', sans-serif;
     font-size: 1.4vw;
+    margin-bottom: rem;
+    padding: 1.2rem;
+    border-radius: 1.5rem;
 }
 
 .captionTitle {
     font-size: 2.5vw;
 }
 
-.imgCarousel {
+.itemCarousel {
+    text-align: center;
     box-shadow:
-        inset 0em 0em 3em 3em rgba(0, 0, 0);
+        inset 0 0 0em 100em rgb(0, 0, 0);
+}
+
+.imgPath {
+    width: 80%;
+    margin: 0 auto;
 }
 
 @media (max-width: 756px) {
