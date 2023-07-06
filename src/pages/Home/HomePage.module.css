@@ -1,0 +1,29 @@
+.titleHome {
+    font-size: 6vw;
+    font-weight: 700;
+    font-style: oblique;
+    top: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 35vw;
+    z-index: 1;
+    transition: font-size 0.15s;
+    background: -webkit-linear-gradient(90deg, #00265f, #8adeff, #8adeff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 756px) {
+    .titleHome {
+        position: relative;
+        font-size: 12vw;
+        top: 3rem;
+        left: 0;
+    }
+
+    .img {
+        display: none;
+    }
+}
