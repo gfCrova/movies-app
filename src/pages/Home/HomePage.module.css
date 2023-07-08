@@ -1,6 +1,6 @@
 
 .divBg {
-    background: radial-gradient(black, black, black, rgba(0, 51, 117, 0.705));
+    background: linear-gradient(180deg, black, rgba(3, 32, 70, 0.76), black);
 }
 
 .title {
