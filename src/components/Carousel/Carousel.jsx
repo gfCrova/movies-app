@@ -4,25 +4,32 @@ import styles from "./Carousel.module.css";
 import { useEffect, useState } from "react";
 import { get } from "../../Utils/httpClient";
 import { API_KEY } from "../../Utils/config";
+import { NavigationSearch } from "../../components/Navigation/NavigationSearch";
 
 export const CarouselHome = () => {
   const [movies, setMovies] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchMovies = async () => {
       try {
         const response = await get(`/trending/movie/week?api_key=${API_KEY}`);
         setMovies(response.results.slice(0, 4));
-        console.log(movies);
+        setIsLoading(false);
       } catch (error) {
         console.log("Error fetching movies: ", error);
       }
     };
     fetchMovies();
   });
+  
+  if (isLoading) {
+    return "";
+  }
 
   return (
-    <Carousel className={styles.carousel}>
+    <div>
+      <Carousel className={styles.carousel}>
       {movies.map((movie) => {
         return (
           <Carousel.Item key={movie.id} className={styles.itemCarousel}>
@@ -31,7 +38,7 @@ export const CarouselHome = () => {
               alt={movie.title}
               className={`${styles.imgPath} opacity-50`}
             />
-            <Carousel.Caption className={`${styles.caption} w-75`}>
+            <Carousel.Caption className={`${styles.caption} w-75 mb-5 pb-5`}>
               <h1
                 className={`${styles.captionTitle} d-flex align-items-center text-start text-light fw-bold`}
               >
@@ -51,5 +58,7 @@ export const CarouselHome = () => {
         );
       })}
     </Carousel>
+    <NavigationSearch />
+    </div>
   );
 };
