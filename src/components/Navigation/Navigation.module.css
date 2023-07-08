@@ -14,6 +14,38 @@
 }
 
 .dropbtn:hover, .btn:hover, .btnItem:hover {
+    cursor: pointer;
     border-radius: 10px;
     background-color: #12477998;
+}
+
+.btn:active, .btnItem:active {
+    transform: scale(0.69);
+    transition: transform 0.1s;
+}
+
+.titleNav {
+    font-size: 2vw;
+    font-weight: 700;
+    font-style: oblique;
+    transition: font-size 0.15s;
+    background: -webkit-linear-gradient(90deg, #00265f, #8adeff, #8adeff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.titleNav:hover {
+    cursor: pointer;
+    transform: scale(1.09);
+    transition: transform 0.1s;
+}
+
+.titleNav:active {
+    transform: scale(0.99);
+    transition: transform 0.1s;
+}
+
+.imgLogo {
+    width: 3vw;
 }
