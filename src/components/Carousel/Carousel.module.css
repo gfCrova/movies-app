@@ -16,8 +16,8 @@
 
 .imgPath {
     width: 87%;
-    -webkit-mask-image: radial-gradient(ellipse 80% 72% at 50%, rgb(33, 37, 41) 0, transparent 65%);
-  mask-image: radial-gradient(ellipse 80% 72% at 50%, rgb(33, 37, 41) 0, transparent 65%);
+    -webkit-mask-image: radial-gradient(ellipse 75% 75% at 50%, rgba(0, 0, 0, 0.466) 0, transparent 65%);
+  mask-image: radial-gradient(ellipse 75% 75% at 50%, rgba(0, 0, 0, 0.479) 0, transparent 65%);
 }
 
 @media (max-width: 756px) {
