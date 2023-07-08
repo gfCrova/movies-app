@@ -1,10 +1,14 @@
-
 /* Style The Dropdown Button */
-.dropbtn, .btn {
+.dropbtn,
+.btn {
     border-radius: 10px;
     cursor: pointer;
     font-weight: 500;
     margin: 0px 10px;
+}
+
+.dropbtn {
+    border: 2px solid rgba(255, 255, 255, 0.699);
 }
 
 .btnItem {
@@ -13,15 +17,17 @@
     background-color: rgba(0, 0, 0, 0.699);
 }
 
-.dropbtn:hover, .btn:hover, .btnItem:hover {
+.dropbtn:hover,
+.btn:hover,
+.btnItem:hover {
     cursor: pointer;
     border-radius: 10px;
     background-color: #12477998;
 }
 
-.btn:active, .btnItem:active {
-    transform: scale(0.69);
-    transition: transform 0.1s;
+.btn:active,
+.btnItem:active {
+    color: #8adeff;
 }
 
 .titleNav {
@@ -48,4 +54,33 @@
 
 .imgLogo {
     width: 3vw;
+}
+
+@media (max-width: 767px) {
+    
+    .btn, .dropbtn {
+        text-align: end;
+        margin-right: 2rem;
+    }
+
+    .toggle {
+        background-color: #8adeff;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        margin-right: 2rem;
+        margin-top: 0.2rem;
+    }
+
+    .navToggle {
+        position: absolute;
+        top: 3rem;
+        right: 0;
+        text-align: end;
+    }
+
+    .btnItem {
+        text-align: end;
+    }
 }

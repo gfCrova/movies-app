@@ -36,22 +36,29 @@ export const Navigation = ({ selectedGenre, onGenreSelect }) => {
   }, [selectedGenre]);
 
   return (
-    <Navbar expand="md" autoFocus fixed="top">
-      <Container className="d-flex gap-4 m-auto align-items-center">
+    <Navbar expand="md" autoFocus fixed="top" data-bs-theme="dark">
+      <Container className="d-flex gap-4 align-items-center">
         <NavbarBrand>
           <Link to={"/"} style={{ textDecorationLine: "none" }}>
-            <h1 className={`${styles.titleNav} text-light p-2 m-0 `}>
+            <h1 className={`${styles.titleNav} text-light m-0 `}>
               goFlix <ImgLogo />
             </h1>
           </Link>
         </NavbarBrand>
         <div>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle
+            aria-controls="basic-navbar-nav"
+            className={styles.toggle}
+          />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav onSelect={handleGenreSelect}>
-              <Nav.Link className={`${styles.btn} text-light`} href="/">
+            <Nav className={styles.navToggle} onSelect={handleGenreSelect}>
+              <Link
+                className={`${styles.btn} text-light p-2`}
+                to="/"
+                style={{ textDecorationLine: "none" }}
+              >
                 Home
-              </Nav.Link>
+              </Link>
               <Nav.Link
                 className={`${styles.btn} text-light`}
                 href="/movie/upcoming"
@@ -69,7 +76,6 @@ export const Navigation = ({ selectedGenre, onGenreSelect }) => {
                 TopRated
               </Nav.Link>
               <NavDropdown
-                menuVariant="dark"
                 className={`${styles.dropbtn}`}
                 title={<span className="text-light">Genres</span>}
                 id="basic-nav-dropdown"
