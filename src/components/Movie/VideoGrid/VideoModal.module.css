@@ -1,13 +1,12 @@
 .modalBody {
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-content: center;
-    width: 100vw;
+    background-color: black;
+    min-height: 100vh;
 }
 
 .divCardVideo {
-    min-width: 920px;
+    min-width: 900px;
 }
 
 @media (max-width:756px) {

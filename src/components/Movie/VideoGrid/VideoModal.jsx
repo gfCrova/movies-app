@@ -26,11 +26,11 @@ export const VideoModal = ({ movie, type }) => {
       </Button>
 
       <Modal size="xl" fullscreen={fullscreen} show={show} onHide={handleClose}>
-        <div className="bg-dark bg-gradient">
+        <div>
           <Modal.Header className="text-light bg-dark">
             <Modal.Title>{type}</Modal.Title>
             <Button
-              className="me-4 position-absolute end-0"
+              className="me-5 position-absolute end-0"
               variant="danger"
               onClick={handleClose}
             >
@@ -39,15 +39,15 @@ export const VideoModal = ({ movie, type }) => {
               </p>
             </Button>
           </Modal.Header>
-          <Modal.Body className="p-0 mt-3">
+          <Modal.Body className={`${styles.modalBody}`}>
             <Container fluid>
-              <div className="d-flex flex-wrap gap-4">
+              <div className="d-flex flex-wrap gap-3">
                 {movie &&
                   movie.results?.map((video) => {
                     if (video.type === type) {
                       return (
                         <div
-                          className={`${styles.divCardVideo} bg-black rounded-2 bg-gradient m-auto p-2`}
+                          className={`${styles.divCardVideo} bg-black bg-gradient mb-4`}
                         >
                           <ReactPlayer
                             url={`https://www.youtube.com/watch?v=${video.key}`}
@@ -58,7 +58,6 @@ export const VideoModal = ({ movie, type }) => {
                           <p className="position-absolute end-25 m-2">
                             {video.official === true ? (
                               <Badge
-                                className="p-1 mt-3"
                                 text="dark"
                                 bg="warning"
                               >
@@ -66,7 +65,7 @@ export const VideoModal = ({ movie, type }) => {
                               </Badge>
                             ) : null}
                           </p>
-                          <ul className="d-flex flex-column align-items-center text-light mt-3 pt-2 mb-0">
+                          <ul className="d-flex flex-column align-items-center text-light mt-2 pt-1 mb-0">
                             <h3>{video.name}</h3>
                             <p>
                               {video.site} - {video.size}p
