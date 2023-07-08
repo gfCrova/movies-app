@@ -46,8 +46,8 @@ export const DetailsPage = () => {
             alt={movie.title}
           />
           <div className={styles.col}>
-            <h1 className={styles.title}>{movie.title}</h1>
-            <p className="fs-5">
+            <h1 className="mt-0">{movie.title}</h1>
+            <p>
               {movie.genres.map((genre) => {
                 return (
                   <Badge className="m-1 text-uppercase" text="dark" bg="info">
@@ -56,18 +56,18 @@ export const DetailsPage = () => {
                 );
               })}
             </p>
-            <p className="fs-5">
-              <strong className={`${styles.strongP} text-uppercase fs-5 text-secondary`}>
+            <p>
+              <strong className={`${styles.strongP} text-uppercase text-secondary`}>
                 Synopsis:{" "}
               </strong>
               {movie.overview}
             </p>
-            <p  className="fs-5">
-              <strong className={`${styles.strongP} text-uppercase fs-5 text-secondary`}>Release Date: </strong>
+            <p >
+              <strong className={`${styles.strongP} text-uppercase text-secondary`}>Release Date: </strong>
               {movie.release_date}
             </p>
-            <p  className="fs-5">
-              <strong className={`${styles.strongP} text-uppercase fs-5 text-secondary`}>Popularity: </strong>
+            <p >
+              <strong className={`${styles.strongP} text-uppercase text-secondary`}>Popularity: </strong>
               {movie.popularity}
             </p>
             <img
