@@ -1,0 +1,10 @@
+.body {
+  background-color: rgba(0, 0, 0, 0.966);
+}
+
+.navHeader {
+  font-size: calc(11px + 1vmin);
+  color: white;
+  font-weight: 500;
+}
+
