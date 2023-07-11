@@ -5,7 +5,6 @@ import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Spinner } from "../Spinner/Spinner";
 import styles from "./Navigation.module.css";
 import { ImgLogo } from "./ItemsNav";
 import { Link } from "react-router-dom";
@@ -33,7 +32,7 @@ export const Navigation = ({ selectedGenre, onGenreSelect }) => {
       setIsLoading(false);
     };
     runSpinner();
-  }, [selectedGenre]);
+  }, [selectedGenre, isLoading]);
 
   return (
     <Navbar expand="md" autoFocus fixed="top" data-bs-theme="dark">
@@ -228,9 +227,3 @@ export const Navigation = ({ selectedGenre, onGenreSelect }) => {
     </Navbar>
   );
 };
-
-/**
-  {genres.map((genre) => {
-    return <ListGenre key={genre} genre={genre} sitio={get(`/movie/genre_ids?=${encodeURIComponent(genre)}`)}/>
-  })}
- */

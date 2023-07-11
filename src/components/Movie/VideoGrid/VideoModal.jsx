@@ -9,11 +9,9 @@ import { Badge } from "react-bootstrap";
 import styles from "./VideoModal.module.css";
 
 export const VideoModal = ({ movie, type }) => {
-  const [fullscreen, setFullscreen] = useState(true);
   const [show, setShow] = useState(false);
 
-  function handleShow(breakpoint) {
-    setFullscreen(breakpoint);
+  function handleShow() {
     setShow(true);
   }
 
@@ -25,7 +23,7 @@ export const VideoModal = ({ movie, type }) => {
         <AiOutlineYoutube size={25} /> {type}
       </Button>
 
-      <Modal size="xl" fullscreen={fullscreen} show={show} onHide={handleClose}>
+      <Modal size="xl" show={show} onHide={handleClose}>
         <div>
           <Modal.Header className="text-light bg-dark">
             <Modal.Title>{type}</Modal.Title>
@@ -57,10 +55,7 @@ export const VideoModal = ({ movie, type }) => {
                           />
                           <p className="position-absolute end-25 m-2">
                             {video.official === true ? (
-                              <Badge
-                                text="dark"
-                                bg="warning"
-                              >
+                              <Badge text="dark" bg="warning">
                                 Official
                               </Badge>
                             ) : null}
@@ -75,7 +70,9 @@ export const VideoModal = ({ movie, type }) => {
                         </div>
                       );
                     } else {
-                      return null;
+                      return (
+                        null && "Not Found!"
+                      );
                     }
                   })}
               </div>

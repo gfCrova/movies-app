@@ -6,7 +6,8 @@
 }
 
 .divCardVideo {
-    min-width: 900px;
+    width: 100%;
+    align-items: center;
 }
 
 @media (max-width:756px) {

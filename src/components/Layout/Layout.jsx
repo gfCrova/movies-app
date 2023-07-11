@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import { Navigation } from "../Navigation/Navigation";
 import { useState } from "react";
 import styles from "../../components/Layout/Layout.module.css";
-
+import { Footer } from '../Footer/Footer'
 
 export default function Layout() {
   const [selectedGenre, setSelectedGenre] = useState(null);
@@ -22,6 +22,7 @@ export default function Layout() {
       <section>
         <Outlet />
       </section>
+      <Footer/>
     </main>
   );
 }
