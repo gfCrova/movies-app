@@ -20,7 +20,6 @@ export const DetailsPage = () => {
   const [movie, setMovie] = useState(); // Datos de la película
 
   useEffect(() => {
-    setIsLoading(true);
     const fetchData = async () => {
       // Obtener los datos de la API para la película específica
       const data = await get("/movie/" + movieId);
