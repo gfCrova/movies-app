@@ -40,7 +40,7 @@ export const Navigation = ({ selectedGenre, onGenreSelect }) => {
         <NavbarBrand>
           <Link to={"/"} style={{ textDecorationLine: "none" }}>
             <h1 className={`${styles.titleNav} text-light m-0 `}>
-              goFlix <ImgLogo />
+              GovaFlix <ImgLogo />
             </h1>
           </Link>
         </NavbarBrand>
