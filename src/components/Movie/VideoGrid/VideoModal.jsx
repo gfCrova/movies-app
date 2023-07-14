@@ -69,10 +69,10 @@ export const VideoModal = ({ movie, type }) => {
                           </ul>
                         </div>
                       );
-                    } else {
-                      return (
-                        null && "Not Found!"
-                      );
+                    } else if(video.type === null || video.type === "" || video.type === undefined) {
+                        return (
+                          <h1 className="text-light text-center">Not Found!</h1>
+                        );
                     }
                   })}
               </div>
