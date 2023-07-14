@@ -14,7 +14,7 @@ export const HomePage = () => {
 
   return (
     <div className={styles.divBg} onChange={() => {setIsLoading(false)}}>
-      <h1 className={styles.title}>GoFlix <img className={styles.imgLogo} src={image} alt="logo"/></h1>
+      <h1 className={styles.title}>GovaFlix <img className={styles.imgLogo} src={image} alt="logo"/></h1>
       <CarouselHome />
       <MovieGridBase key={debounceSearch} search={debounceSearch} />
     </div>
