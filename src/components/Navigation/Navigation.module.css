@@ -11,22 +11,14 @@
     border: 2px solid rgba(255, 255, 255, 0.699);
 }
 
-.btnItem {
-    font-size: 13pt;
-    font-weight: 500;
-    background-color: rgba(0, 0, 0, 0.699);
-}
-
 .dropbtn:hover,
-.btn:hover,
-.btnItem:hover {
+.btn:hover {
     cursor: pointer;
     border-radius: 10px;
     background-color: #12477998;
 }
 
-.btn:active,
-.btnItem:active {
+.btn:active {
     color: #8adeff;
 }
 
@@ -64,7 +56,7 @@
     }
 
     .toggle {
-        background-color: #8adeff;
+        background-color: #83828286;
         position: absolute;
         right: 0;
         top: 0;
@@ -77,10 +69,6 @@
         position: absolute;
         top: 3rem;
         right: 0;
-        text-align: end;
-    }
-
-    .btnItem {
         text-align: end;
     }
 }
