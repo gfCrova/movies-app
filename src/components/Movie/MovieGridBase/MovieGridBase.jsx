@@ -52,10 +52,6 @@ export const MovieGridBase = ({search, genre, topRated, videos, upcoming, nowPla
     return <Empty />;
   }
 
-  if(isLoading) {
-    setIsLoading(true);
-  }
-
   return (
     <InfiniteScroll
       dataLength={moviesRef.current.length}
