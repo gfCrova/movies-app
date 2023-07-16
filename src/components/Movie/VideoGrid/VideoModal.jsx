@@ -41,6 +41,7 @@ export const VideoModal = ({ movie, type }) => {
             <Container fluid>
               <div className="d-flex flex-wrap gap-3">
                 {movie &&
+                  // eslint-disable-next-line array-callback-return
                   movie.results?.map((video) => {
                     if (video.type === type) {
                       return (
