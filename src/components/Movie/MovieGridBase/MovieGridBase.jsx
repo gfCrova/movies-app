@@ -52,7 +52,7 @@ export const MovieGridBase = ({search, genre, topRated, videos, upcoming, nowPla
     return <Empty />;
   }
 
-  if(!isLoading) {
+  if(isLoading) {
     setIsLoading(true);
   }
 
