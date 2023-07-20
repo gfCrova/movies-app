@@ -11,6 +11,7 @@ import { TopRated } from "../pages/TopRated/TopRated";
 import { VideoGrid } from "../components/Movie/VideoGrid/VideoGrid";
 import { Upcoming } from "../pages/Upcoming/Upcoming";
 import Layout from "../components/Layout/Layout";
+import { SerieGrid } from "../components/Serie/SerieGrid";
 
 export const App = () => {
   return (
@@ -23,6 +24,7 @@ export const App = () => {
           <Route path="movie/top_rated" element={<TopRated />} />
           <Route path="movie/:movieId/videos" element={<VideoGrid />} />
           <Route path="movie/upcoming" element={<Upcoming />} />
+          <Route path="serie" element={<SerieGrid/>}></Route>
           <Route path="*" element={<Navigate replace to="/" />} />{" "}
           {/* Cualquier Ruta inexistente, Redirecciona a Home */}
         </Route>
