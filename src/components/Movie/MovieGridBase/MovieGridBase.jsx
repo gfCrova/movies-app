@@ -27,8 +27,6 @@ export const MovieGridBase = ({search, genre, topRated, videos, upcoming, nowPla
         searchUrl = `/movie/${genre}/videos?api_key=${API_KEY}&language=en-US`
       } else if(upcoming) {
         searchUrl = `/movie/upcoming?api_key=${API_KEY}&page=${page}`
-      } else if(nowPlaying) {
-        searchUrl = `/movie/now_playing?language=en-US&page=${page}`
       } else {
         searchUrl = `/discover/movie?page=${page}`;
       }
