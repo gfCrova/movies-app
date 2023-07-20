@@ -20,6 +20,8 @@ export const Navigation = ({ selectedGenre, onGenreSelect }) => {
       setSelectedNavItem(eventKey);
     } else if (eventKey === "upcoming") {
       setSelectedNavItem(eventKey);
+    } else if (eventKey === "series") {
+      setSelectedNavItem(eventKey);
     } else {
       navigate(`/genres/${eventKey}`);
       onGenreSelect(eventKey);
@@ -68,6 +70,14 @@ export const Navigation = ({ selectedGenre, onGenreSelect }) => {
               </Nav.Link>
               <Nav.Link
                 className={`${styles.btn} text-light`}
+                href="/serie"
+                eventKey="series"
+                active={selectedNavItem === "series"}
+              > 
+                Series
+              </Nav.Link>
+              <Nav.Link
+                className={`${styles.btn} text-light`}
                 href="/movie/top_rated"
                 eventKey="top_rated"
                 active={selectedNavItem === "top_rated"}
@@ -79,46 +89,25 @@ export const Navigation = ({ selectedGenre, onGenreSelect }) => {
                 title={<span className="text-light">Genres</span>}
                 id="basic-nav-dropdown"
               >
-                <NavDropdown.Item
-                  eventKey={28}
-                  active={selectedGenre === 28}
-                >
+                <NavDropdown.Item eventKey={28} active={selectedGenre === 28}>
                   Action
                 </NavDropdown.Item>
-                <NavDropdown.Item
-                  eventKey={12}
-                  active={selectedGenre === 12}
-                >
+                <NavDropdown.Item eventKey={12} active={selectedGenre === 12}>
                   Adventure
                 </NavDropdown.Item>
-                <NavDropdown.Item
-                  eventKey={16}
-                  active={selectedGenre === 16}
-                >
+                <NavDropdown.Item eventKey={16} active={selectedGenre === 16}>
                   Animation
                 </NavDropdown.Item>
-                <NavDropdown.Item
-                  eventKey={35}
-                  active={selectedGenre === 35}
-                >
+                <NavDropdown.Item eventKey={35} active={selectedGenre === 35}>
                   Comedy
                 </NavDropdown.Item>
-                <NavDropdown.Item
-                  eventKey={80}
-                  active={selectedGenre === 80}
-                >
+                <NavDropdown.Item eventKey={80} active={selectedGenre === 80}>
                   Crime
                 </NavDropdown.Item>
-                <NavDropdown.Item
-                  eventKey={99}
-                  active={selectedGenre === 99}
-                >
+                <NavDropdown.Item eventKey={99} active={selectedGenre === 99}>
                   Documentary
                 </NavDropdown.Item>
-                <NavDropdown.Item
-                  eventKey={18}
-                  active={selectedGenre === 18}
-                >
+                <NavDropdown.Item eventKey={18} active={selectedGenre === 18}>
                   Drama
                 </NavDropdown.Item>
                 <NavDropdown.Item
@@ -127,28 +116,16 @@ export const Navigation = ({ selectedGenre, onGenreSelect }) => {
                 >
                   Family
                 </NavDropdown.Item>
-                <NavDropdown.Item
-                  eventKey={14}
-                  active={selectedGenre === 14}
-                >
+                <NavDropdown.Item eventKey={14} active={selectedGenre === 14}>
                   Fantasy
                 </NavDropdown.Item>
-                <NavDropdown.Item
-                  eventKey={36}
-                  active={selectedGenre === 36}
-                >
+                <NavDropdown.Item eventKey={36} active={selectedGenre === 36}>
                   History
                 </NavDropdown.Item>
-                <NavDropdown.Item
-                  eventKey={27}
-                  active={selectedGenre === 27}
-                >
+                <NavDropdown.Item eventKey={27} active={selectedGenre === 27}>
                   Horror
                 </NavDropdown.Item>
-                <NavDropdown.Item
-                  eventKey={36}
-                  active={selectedGenre === 36}
-                >
+                <NavDropdown.Item eventKey={36} active={selectedGenre === 36}>
                   Musik
                 </NavDropdown.Item>
                 <NavDropdown.Item
@@ -169,10 +146,7 @@ export const Navigation = ({ selectedGenre, onGenreSelect }) => {
                 >
                   Romance
                 </NavDropdown.Item>
-                <NavDropdown.Item
-                  eventKey={878}
-                  active={selectedGenre === 878}
-                >
+                <NavDropdown.Item eventKey={878} active={selectedGenre === 878}>
                   Science Fiction
                 </NavDropdown.Item>
                 <NavDropdown.Item
@@ -181,10 +155,7 @@ export const Navigation = ({ selectedGenre, onGenreSelect }) => {
                 >
                   TV-Film
                 </NavDropdown.Item>
-                <NavDropdown.Item
-                  eventKey={53}
-                  active={selectedGenre === 53}
-                >
+                <NavDropdown.Item eventKey={53} active={selectedGenre === 53}>
                   Thriller
                 </NavDropdown.Item>
                 <NavDropdown.Item
@@ -193,10 +164,7 @@ export const Navigation = ({ selectedGenre, onGenreSelect }) => {
                 >
                   War Movie
                 </NavDropdown.Item>
-                <NavDropdown.Item
-                  eventKey={37}
-                  active={selectedGenre === 37}
-                >
+                <NavDropdown.Item eventKey={37} active={selectedGenre === 37}>
                   Western
                 </NavDropdown.Item>
               </NavDropdown>
