@@ -27,9 +27,9 @@ export const MovieCard = ({ movie }) => {
           height={345}
           className={styles.movieImage}
           src={imgUrl}
-          alt={"Image of the movie: " + movie.title}
+          alt={"Image of the movie: " + movie.title || movie.name}
         />
-        <p className={styles.movieTitle}>{movie.title}</p>
+        <p className={styles.movieTitle}>{movie.title || movie.name}</p>
       </Link>
     </div>
   );

@@ -5,9 +5,16 @@ import { Spinner } from "../../Spinner/Spinner";
 import InfiniteScroll from "react-infinite-scroll-component";
 import styles from "./MovieGrid.module.css";
 import { Empty } from "../../Empty/Empty";
-import {API_KEY} from '../../../Utils/config'
+import { API_KEY } from "../../../Utils/config";
 
-export const MovieGridBase = ({search, genre, topRated, videos, upcoming, nowPlaying}) => {
+export const MovieGridBase = ({
+  search,
+  genre,
+  topRated,
+  videos,
+  upcoming,
+  tvseries,
+}) => {
   const moviesRef = useRef([]);
   const [hasMore, setHasMore] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
@@ -21,12 +28,14 @@ export const MovieGridBase = ({search, genre, topRated, videos, upcoming, nowPla
         searchUrl = `/search/movie?query=${search}&page=${page}`;
       } else if (genre) {
         searchUrl = `/discover/movie?api_key=${API_KEY}&language=en-US&sort_by=release_date.desc&with_genres=${genre}&page=${page}`;
-      } else if(topRated) {
+      } else if (topRated) {
         searchUrl = `/movie/top_rated?api_key=${API_KEY}&language=en-US&page=${page}`;
-      } else if(videos) {
-        searchUrl = `/movie/${genre}/videos?api_key=${API_KEY}&language=en-US`
-      } else if(upcoming) {
-        searchUrl = `/movie/upcoming?api_key=${API_KEY}&page=${page}`
+      } else if (videos) {
+        searchUrl = `/movie/${genre}/videos?api_key=${API_KEY}&language=en-US`;
+      } else if (upcoming) {
+        searchUrl = `/movie/upcoming?api_key=${API_KEY}&page=${page}`;
+      } else if (tvseries) {
+        searchUrl = `/discover/tv?page=${page}`;
       } else {
         searchUrl = `/discover/movie?page=${page}`;
       }
@@ -41,17 +50,16 @@ export const MovieGridBase = ({search, genre, topRated, videos, upcoming, nowPla
       setHasMore(data.page < data.total_pages);
       setIsLoading(false);
     };
-    
-    fetchData();
 
-  }, [search, genre, page, moviesRef, topRated, upcoming, videos, nowPlaying]);
+    fetchData();
+  }, [search, genre, page, moviesRef, topRated, upcoming, videos, tvseries]);
 
   if (moviesRef.current.length === 0 && !hasMore && !isLoading) {
     return <Empty />;
   }
 
-  if(!isLoading) {
-    setIsLoading(true);
+  if (!isLoading) {
+    setIsLoading(true)
   }
 
   return (
