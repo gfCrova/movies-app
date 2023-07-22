@@ -70,19 +70,19 @@ export const Navigation = ({ selectedGenre, onGenreSelect }) => {
               </Nav.Link>
               <Nav.Link
                 className={`${styles.btn} text-light`}
-                href="/serie"
-                eventKey="series"
-                active={selectedNavItem === "series"}
-              > 
-                Series
-              </Nav.Link>
-              <Nav.Link
-                className={`${styles.btn} text-light`}
                 href="/movie/top_rated"
                 eventKey="top_rated"
                 active={selectedNavItem === "top_rated"}
               >
                 TopRated
+              </Nav.Link>
+              <Nav.Link
+                className={`${styles.btn} text-light`}
+                href="/series"
+                eventKey="series"
+                active={selectedNavItem === "series"}
+              > 
+                TV Series
               </Nav.Link>
               <NavDropdown
                 className={`${styles.dropbtn}`}
