@@ -1,4 +1,6 @@
-## Movies App
+# Movies App
+
+<br>
 
 In the project directory, you can run:
 
