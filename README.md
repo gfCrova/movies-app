@@ -9,4 +9,6 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-site: govaflix.netlify.app/
+![Site Netlify](https://img.shields.io/badge/Site-Netlify-green?style=for-the-badge)
+
+<a href="govaflix.netlify.app/">Govaflix</a>
