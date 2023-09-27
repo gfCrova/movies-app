@@ -11,4 +11,4 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ![Site Netlify](https://img.shields.io/badge/Site-Netlify-green?style=for-the-badge)
 
-<a href="https://govaflix.netlify.app/">Govaflix</a>
+<a href="https://pelisplusgc.netlify.app">PelisPlus</a>
