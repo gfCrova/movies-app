@@ -13,7 +13,7 @@ export const HomePage = () => {
 
   return (
     <div className={styles.divBg}>
-      <h1 className={styles.title}>GovaFlix <img className={styles.imgLogo} src={image} alt="logo"/></h1>
+      <h1 className={styles.title}>PelisPlus <img className={styles.imgLogo} src={image} alt="logo"/></h1>
       <CarouselHome />
       <MovieGridBase key={debounceSearch} search={debounceSearch} />
     </div>
