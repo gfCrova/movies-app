@@ -7,7 +7,7 @@
 .spinner {
     color: aliceblue;
     margin: 4rem;
-    animation: spinn 0.2s infinite;
+    animation: spinn 0.8s infinite;
 }
 
 @keyframes spinn {
