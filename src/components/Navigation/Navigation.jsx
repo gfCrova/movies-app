@@ -42,7 +42,7 @@ export const Navigation = ({ selectedGenre, onGenreSelect }) => {
         <NavbarBrand>
           <Link to={"/"} style={{ textDecorationLine: "none" }}>
             <h1 className={`${styles.titleNav} text-light m-0 `}>
-              GovaFlix <ImgLogo />
+              PelisPlus <ImgLogo />
             </h1>
           </Link>
         </NavbarBrand>
